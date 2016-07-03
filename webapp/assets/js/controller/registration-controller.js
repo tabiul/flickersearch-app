@@ -1,5 +1,5 @@
 'use strict'
-flickerSearchApp.controller('RegistrationController', function ($scope, $http, $location, $rootScope) {
+flickerSearchApp.controller('RegistrationController', function ($scope, $http, $location, AuthService) {
 	$scope.register = function(){
 	   var data = {
 		   username : $scope.username,
@@ -8,7 +8,7 @@ flickerSearchApp.controller('RegistrationController', function ($scope, $http, $
 	   var res = $http.post('http://localhost:8080/user', angular.toJson(data));
 	   res.success(function(response, status, headers, config) {
 			if(status == 201){
-				$rootScope.username = $scope.username
+				AuthService.setUser($scope.username);
 				$location.path("/images")
 			}
 		});

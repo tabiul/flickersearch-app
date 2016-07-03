@@ -17,13 +17,13 @@ The webApp allows the user to search for a specific photo available in Flicker(h
 ## Requirements
 
    * Go 1.6 or later
-   * Golint (https://github.com/golang/lint). Make sure `golint` is added to __PATH__
+   * Golint (https://github.com/golang/lint). Make sure `golint` is added to __PATH__. This is optional
    * Python 2.7 (used for building)
 
 ## Setup
 
    * download Go (https://golang.org/dl/)
-   * setup `GOROOT` environment variable (refers to location of GO installation path)
+   * setup `GOROOT` environment variable (refers to the above link for further details for os specific instruction)
    * add `$GOROOT/bin` to __PATH__ environment variables
    * clone this repo
       * git clone https://github.com/tabiul/flickersearch-app.git
@@ -44,7 +44,7 @@ The webApp allows the user to search for a specific photo available in Flicker(h
 
 navigate to folder `bin/linux_amd64`
 
-    ./flickersearch -apiKey <apiKey> -port 8080 -webapp ../../webapp
+    ./flickersearch -apiKey <apiKey> -port 8080 -webapp ../webapp
 
 ### Windows
 
