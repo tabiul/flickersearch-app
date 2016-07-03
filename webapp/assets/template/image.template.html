@@ -1,0 +1,33 @@
+  <div ng-controller="ImageController" data-ng-init="init()">
+    username: {{username}}
+	<div>
+        <span>{{message}}</span>
+	</div>
+	<div>
+	   <a href ng-click="logout()">logout</a>
+	</div>
+    <div >
+      <p>
+        Search:
+        <input ng-keyup="complete()" ng-model="query" id="search"/> <button ng-click="search()">search</button>
+      </p>
+    </div>
+    <div>
+      <ul>
+        <li ng-repeat="image in imageURLList">
+          <a target="_blank" href="{{image.large}}">
+            <img ng-src="{{image.thumb}}"/>
+          </a>
+        </li>
+      </ul>
+	  <div style="text-align: center">
+         <a href ng-click="prev()"> << </a>
+	     <div class="divider" />
+         <a href ng-click="next()"> >> </a>
+         <br />         	 
+	  </div>
+	  <div>
+	      {{page}} of {{pages}}	
+	  </div>
+    </div>
+  </div>
