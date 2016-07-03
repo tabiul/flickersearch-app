@@ -44,13 +44,13 @@ The webApp allows the user to search for a specific photo available in Flicker(h
 
 navigate to folder `bin/linux_amd64`
 
-    ./flickersearch -apiKey <apiKey> -port 8080 -webapp ../webapp
+    ./flickersearch -apiKey <apiKey> -port 8080 -webapp <path to webapp folder that is found in the root folder>
 
 ### Windows
 
 navigate to folder `bin\windows_386`
 
-    flickersearch.exe -apiKey <apiKey> -port 8080 -webapp ..\..\webapp
+    flickersearch.exe -apiKey <apiKey> -port 8080 -webapp <path to webapp folder that is found in the root folder>
 
 The webapp assumes port ___8080___. Should you decide to change the port then you will need to update the js scripts accordingly
 
